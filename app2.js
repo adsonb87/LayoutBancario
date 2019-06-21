@@ -39,7 +39,7 @@ fs.readFile('./RM181018.txt', 'UTF8' ,function(err,data){
 	console.log(linhas[0].toString().substring(394,400));*/
 
 	//Detalhe
-	/*for(var i=1 ; i<linhas.length; i++){
+	for(var i=1 ; i<linhas.length; i++){
 		if(linhas[i].toString().substring(0,1) != 9){
 			console.log(linhas[i].toString().substring(0,1));
 			console.log(linhas[i].toString().substring(1,3));
@@ -87,9 +87,12 @@ fs.readFile('./RM181018.txt', 'UTF8' ,function(err,data){
 			console.log(linhas[i].toString().substring(391,393));
 			console.log(linhas[i].toString().substring(393,394));
 			console.log(linhas[i].toString().substring(394,400));
+		}else if(linhas[i].toString().substring(0,1) == 9){
+			console.log(linhas[i].toString().substring(0,1));
+			console.log(linhas[i].toString().substring(1,394));
+			console.log(linhas[i].toString().substring(394,400));
 		}
-	}*/
-
+	}
 
 	/*linhas.forEach(function(linha){
 		var pos = linha.toString().substring(73,98);
