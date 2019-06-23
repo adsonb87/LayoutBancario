@@ -11,9 +11,9 @@ module.exports.remessa = function (app,req,res) {
 		linhas = data.split(/\r?\n/);
 	});
 
-	var trailerDAO = app.app.models.TrailerDAO(linhas);
+	var trailerDAO = new app.app.models.TrailerDAO(linhas);
 
 	trailerDAO.setTrailer(function(erro, result){
-		console.log(result);
+		res.send(teste);
 	});
 }
