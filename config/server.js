@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var fileStream = require('fs');
 
-
 var app = express();
 app.set('view engine', 'ejs');
 app.set('views','./app/views');
