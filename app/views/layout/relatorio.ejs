@@ -11,30 +11,57 @@
 	</nav>
 	<div class="col-sm-8">
 		<div class="row">
-			<div class="col-sm-2">
-				<ul class="nav flex-column">
-				
-				</ul>
-			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-12">
 				<table class="table">
 					<thead>
 				    	<tr>
-					      <th scope="col">RA</th>
-					      <th scope="col">Nome Aluno</th>
-					      <th scope="col">Email</th>
-					      <th scope="col">Senha</th>
-					      <th scope="col">Ação</th>
+					      <th scope="col">Literal da remessa</th>
+					      <th scope="col">Literal do Serviço</th>
+					      <th scope="col">Agencia</th>
+					      <th scope="col">Conta</th>
+					      <th scope="col">DAC</th>
+					      <th scope="col">Nome do Colégio</th>
+					      <th scope="col">Banco</th>
+					      <th scope="col">Data de Geração</th>
 						</tr>
 					</thead>
-					<tbody>
-						<% for(var i=0; i < linhas.length; i++){ %>		
-							<tr>			
-								<td><%=linhas[i].toString().substring(0,1)%></td>
-								<td><%=linhas[i].toString().substring(1,394)%></td>
-								<td><%=linhas[i].toString().substring(394,400)%></td>
-							</tr>
-						<% } %>
+					<tbody>		
+						<tr>			
+							<td><%=linhas[0].toString().substring(2,9)%></td>
+							<td><%=linhas[0].toString().substring(11,26)%></td>
+							<td><%=linhas[0].toString().substring(26,30)%></td>
+							<td><%=linhas[0].toString().substring(32,37)%></td>
+							<td><%=linhas[0].toString().substring(37,38)%></td>
+							<td><%=linhas[0].toString().substring(46,76)%></td>
+							<td><%=linhas[0].toString().substring(79,94)%></td>
+							<td><%=linhas[0].toString().substring(94,100)%></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table">
+					<thead>
+				    	<tr>
+					      <th scope="col">Identificação Lançamento</th>
+					      <th scope="col">Nosso Número</th>
+					      <th scope="col">Código da Ocorrência</th>
+					      <th scope="col">Vencimento</th>
+					      <th scope="col">Valor Título</th>
+					      <th scope="col">Nome do Colégio</th>
+					      <th scope="col">Banco</th>
+					      <th scope="col">Data de Geração</th>
+						</tr>
+					</thead>
+					<tbody>		
+						<tr>			
+							<td><%=linhas[1].toString().substring(37,62)%></td>
+							<td><%=linhas[1].toString().substring(62,70)%></td>
+							<td><%=linhas[1].toString().substring(108,110)%></td>
+							<td><%=linhas[1].toString().substring(120,126)%></td>
+							<td><%=linhas[1].toString().substring(126,139)%></td>
+							<td><%=linhas[1].toString().substring(46,76)%></td>
+							<td><%=linhas[1].toString().substring(79,94)%></td>
+							<td><%=linhas[1].toString().substring(94,100)%></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>

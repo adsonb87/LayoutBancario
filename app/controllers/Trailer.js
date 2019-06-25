@@ -9,9 +9,15 @@ module.exports.remessa = function (app,req,res) {
 			process.exit(1);
 		}
 		linhas = data.split(/\r?\n/);
+		
+		var trailerDAO = new app.app.models.TrailerDAO();
 
+		trailerDAO.setTipoDeRegistro(linhas[2]);
+		
 		res.render("layout/relatorio", {linhas : linhas});
 	});
+
+
 	//res.render("layout/relatorio");
 
 	/*

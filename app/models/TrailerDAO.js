@@ -1,8 +1,19 @@
-function TrailerDAO(linhas){
-	this._linhas = linhas;
+function TrailerDAO(){
+
 }
 
-var trailer = new Object();
+var tipoDeRegistro;
+var brancos;
+var numeroSequencial;
+
+
+TrailerDAO.prototype.setTipoDeRegistro = function(linhas){
+	this.tipoDeRegistro =  linhas.toString().substring(0,1);
+	console.log(this.tipoDeRegistro);
+	console.log(linhas);
+}
+
+
 
 TrailerDAO.prototype.setTrailer = function(){
 	trailer = {

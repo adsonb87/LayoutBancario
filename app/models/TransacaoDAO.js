@@ -2,6 +2,8 @@ function TransacaoDAO(linhas){
 	this._linhas = linhas;
 }
 
+
+
 TransacaoDAO.prototype.setTransacao = function(){
 	this._tipoDeRegistro = this._linhas[i].toString().substring(0,1);
 	this._codigoDeInscricao = this._linhas[i].toString().substring(1,3);
