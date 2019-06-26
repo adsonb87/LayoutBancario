@@ -10,12 +10,8 @@ module.exports.remessa = function (app,req,res) {
 		}
 		linhas = data.split(/\r?\n/);
 		
-		var trailerDAO = new app.app.models.TrailerDAO();
-
-		trailerDAO.setTipoDeRegistro(linhas[2]);
-		trailerDAO.setBrancos(linhas[2]);
-		trailerDAO.setNumeroSequencial(linhas[2]);
-		
+        var trailerDAO = app.app.controllers.Trailer.getTrailer(app,req,res,linhas);
+        
 		res.render("layout/relatorio", {linhas, trailerDAO});
 	});
 }
