@@ -9,25 +9,26 @@ var numeroSequencial;
 
 TrailerDAO.prototype.setTipoDeRegistro = function(linhas){
 	this.tipoDeRegistro =  linhas.toString().substring(0,1);
-	console.log(this.tipoDeRegistro);
-	console.log(linhas);
 }
 
+TrailerDAO.prototype.setBrancos = function(linhas){
+	this.brancos =  linhas.toString().substring(1,394);
+}
 
+TrailerDAO.prototype.setNumeroSequencial = function(linhas){
+	this.numeroSequencial = linhas.toString().substring(394,400);
+}
 
-TrailerDAO.prototype.setTrailer = function(){
-	trailer = {
-		tipoDeRegistro : this._linhas.toString().substring(0,1),
-		brancos : this._linhas.toString().substring(1,394),
-		numeroSequencial : this._linhas.toString().substring(394,400)
-	};
+TrailerDAO.prototype.getTipoDeRegistro = function(){
+	return this.tipoDeRegistro;
+}
 
-	console.log(trailer);
+TrailerDAO.prototype.getBrancos = function(){
+	return this.brancos;
+}
 
-	/*trailer._tipoDeRegistro = this._linhas[2].toString().substring(0,1);
-	trailer._brancos = this._linhas[2].toString().substring(1,394);
-	trailer._numeroSequencial = this._linhas[2].toString().substring(394,400);
-	return trailer;*/
+TrailerDAO.prototype.getNumeroSequencial = function(){
+	return this.numeroSequencial;
 }
 
 module.exports = function(){

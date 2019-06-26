@@ -13,17 +13,9 @@ module.exports.remessa = function (app,req,res) {
 		var trailerDAO = new app.app.models.TrailerDAO();
 
 		trailerDAO.setTipoDeRegistro(linhas[2]);
+		trailerDAO.setBrancos(linhas[2]);
+		trailerDAO.setNumeroSequencial(linhas[2]);
 		
-		res.render("layout/relatorio", {linhas : linhas});
+		res.render("layout/relatorio", {linhas, trailerDAO});
 	});
-
-
-	//res.render("layout/relatorio");
-
-	/*
-	var trailerDAO = new app.app.models.TrailerDAO(linhas);
-
-	trailerDAO.setTrailer(function(erro, result){
-		res.send(teste);
-	});*/
 }
