@@ -24,7 +24,7 @@ HeaderDAO.prototype.setTipoDeRegistro = function(linhas){
 }
 
 HeaderDAO.prototype.getTipoDeRegistro = function(){
-	return this.tipoDeRegistro
+	return this.tipoDeRegistro;
 }
 
 HeaderDAO.prototype.setOperacao = function(linhas){
