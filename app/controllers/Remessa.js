@@ -10,8 +10,11 @@ module.exports.remessa = function (app,req,res) {
 		}
 		linhas = data.split(/\r?\n/);
 		
-        var trailerDAO = app.app.controllers.Trailer.getTrailer(app,req,res,linhas);
-        
-		res.render("layout/relatorio", {linhas, trailerDAO});
+        var headerDAO = app.app.controllers.Header.getHeader(app,req,res,linhas);
+        var transacaoDAO = app.app.controllers.Transacao.getTransacao(app,req,res,linhas);
+    	var trailerDAO = app.app.controllers.Trailer.getTrailer(app,req,res,linhas);
+
+    	
+		res.render("layout/relatorio", {linhas, headerDAO, transacaoDAO, trailerDAO});
 	});
 }
