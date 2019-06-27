@@ -90,11 +90,11 @@ TransacaoDAO.prototype.getZeros = function(){
 	return this.zeros;
 }
 
-TransacaoDAO.prototype.setAgencia = function(linhas){
+TransacaoDAO.prototype.setConta = function(linhas){
 	this.conta = linhas.toString().substring(23,28);
 }
 
-TransacaoDAO.prototype.getAgencia = function(){
+TransacaoDAO.prototype.getConta = function(){
 	return this.conta;
 }
 
@@ -386,11 +386,11 @@ TransacaoDAO.prototype.getBrancos3 = function(){
 	return this.brancos3;
 }
 
-TransacaoDAO.prototype.setdataDeMora = function(linhas){
+TransacaoDAO.prototype.setDataDeMora = function(linhas){
 	this.dataDeMora = linhas.toString().substring(385,391);
 }
 	
-TransacaoDAO.prototype.getdataDeMora = function(){
+TransacaoDAO.prototype.getDataDeMora = function(){
 	return this.dataDeMora;
 }
 

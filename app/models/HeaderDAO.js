@@ -75,11 +75,11 @@ HeaderDAO.prototype.getZeros = function(){
 	return this.zeros;
 }
 
-HeaderDAO.prototype.setZeros = function(linhas){
+HeaderDAO.prototype.setConta = function(linhas){
 	this.conta = linhas.toString().substring(32,37);
 }
 
-HeaderDAO.prototype.getZeros = function(){
+HeaderDAO.prototype.getConta = function(){
 	return this.conta;
 }
 

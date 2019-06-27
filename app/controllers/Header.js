@@ -1,5 +1,5 @@
 module.exports.getHeader = function (app,req,res,linhas) {
-	var headerDao = new app.app.models.HeaderDAO();
+	var headerDAO = new app.app.models.HeaderDAO();
 
 	headerDAO.setTipoDeRegistro(linhas[0]);
 	headerDAO.setOperacao(linhas[0]);
@@ -18,5 +18,5 @@ module.exports.getHeader = function (app,req,res,linhas) {
 	headerDAO.setBrancos2(linhas[0]);
 	headerDAO.setNumeroSequencial(linhas[0]);	
 
-    return headerDao;
+    return headerDAO;
 }
