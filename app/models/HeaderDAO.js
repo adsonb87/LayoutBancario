@@ -56,7 +56,7 @@ HeaderDAO.prototype.setLiteralDeServico = function(linhas){
 }
 
 HeaderDAO.prototype.getLiteralDeServico = function(){
-	return literalDeServico;
+	return this.literalDeServico;
 }
 
 HeaderDAO.prototype.setAgencia = function(linhas){

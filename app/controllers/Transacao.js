@@ -55,12 +55,7 @@ module.exports.getTransacao = function (app,req,res,linhas) {
 			transacaoDAO.setNumeroSequencial(linhas[i]);
 
 			transacoes.push(transacaoDAO); //Adiciona a transação ao final do Array
-
 		}
-	}
-
-	for(var i=0; i<transacoes.length; i++){
-		console.log(transacoes[i]);
 	}
 
 	return transacoes;
