@@ -22,7 +22,7 @@ module.exports.getTransacao = function (app,req,res,linhas) {
 			transacaoDAO.setNumeroDaCarteira(linhas[i]);
 			transacaoDAO.setUsoDoBanco(linhas[i]);
 			transacaoDAO.setCarteira(linhas[i]);
-			transacaoDAO.setCodigoOcorrenca(linhas[i]);
+			transacaoDAO.setCodigoOcorrencia(linhas[i]);
 			transacaoDAO.setNumeroDocumento(linhas[i]);
 			transacaoDAO.setVencimento(linhas[i]);
 			transacaoDAO.setValorTitulo(linhas[i]);

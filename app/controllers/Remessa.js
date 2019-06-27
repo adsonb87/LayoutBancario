@@ -14,7 +14,6 @@ module.exports.remessa = function (app,req,res) {
         var transacaoDAO = app.app.controllers.Transacao.getTransacao(app,req,res,linhas);
     	var trailerDAO = app.app.controllers.Trailer.getTrailer(app,req,res,linhas);
 
-    	
 		res.render("layout/relatorio", {linhas, headerDAO, transacaoDAO, trailerDAO});
 	});
 }

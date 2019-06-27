@@ -17,7 +17,7 @@ var quantidadeMoeda;
 var numeroDaCarteira;
 var usoDoBanco;
 var carteira;
-var codigoOcorrenca;
+var codigoOcorrencia;
 var numeroDocumento;
 var vencimento;
 var valorTitulo;
@@ -170,11 +170,11 @@ TransacaoDAO.prototype.getCarteira = function(){
 	return this.carteira;
 }
 
-TransacaoDAO.prototype.setCodigoOcorrenca = function(linhas){
+TransacaoDAO.prototype.setCodigoOcorrencia = function(linhas){
 	this.codigoOcorrenca = linhas.toString().substring(108,110);
 }
 
-TransacaoDAO.prototype.getCodigoOcorrenca = function(){
+TransacaoDAO.prototype.getCodigoOcorrencia = function(){
 	return this.codigoOcorrenca;
 }
 

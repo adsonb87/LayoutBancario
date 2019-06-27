@@ -41,31 +41,28 @@
 				<table class="table">
 					<thead>
 				    	<tr>
-					      <th scope="col">Identificação Lançamento</th>
 					      <th scope="col">Nosso Número</th>
 					      <th scope="col">Código da Ocorrência</th>
 					      <th scope="col">Vencimento</th>
 					      <th scope="col">Valor Título</th>
-					      <th scope="col">Nome do Colégio</th>
-					      <th scope="col">Banco</th>
-					      <th scope="col">Data de Geração</th>
+					      <th scope="col">Nome do Sacado</th>
 						</tr>
 					</thead>
 					<tbody>
-						<%= for(var i=1; i<transacaoDAO.length;++i){ %>		
+						<%var cont = 0;%>
+						<% for(var i=0; i<transacaoDAO.length; ++i){ %>		
 						<tr>			
-							<td><%=transacaoDAO[i]%></td>
-							<td><%=transacaoDAO[i]%></td>
-							<td><%=transacaoDAO[i]%></td>
-							<td><%=transacaoDAO[i]%></td>
-							<td><%=transacaoDAO[i]%></td>
-							<td><%=transacaoDAO[i]%></td>
-							<td><%=transacaoDAO[i]%></td>
-							<td><%=transacaoDAO[i]%></td>
+							<td><%=transacaoDAO[i].getNossoNumero()%></td>
+							<td><%=transacaoDAO[i].getCodigoOcorrencia()%></td>
+							<td><%=transacaoDAO[i].getVencimento()%></td>
+							<td><%=transacaoDAO[i].getValorTitulo()%></td>
+							<td><%=transacaoDAO[i].getNome()%></td>
 						</tr>
-						<%=}%>
+						<%cont++%>
+						<%}%>
 					</tbody>
 				</table>
+				<p><%=cont%></p>
 				<table class="table">
 					<thead>
 				    	<tr>
