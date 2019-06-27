@@ -1,8 +1,8 @@
 module.exports.getTransacao = function (app,req,res,linhas) {
-	var transacaoDAO = new app.app.models.TransacaoDAO();
 	var transacoes = [];
 
 	for(var i=1; i<linhas.length; i++){
+		var transacaoDAO = new app.app.models.TransacaoDAO();
 		if(linhas[i].toString().substring(0,1) != 9){
 			transacaoDAO.setTipoDeRegistro(linhas[i]);
 			transacaoDAO.setCodigoDeInscricao(linhas[i]);
@@ -51,9 +51,9 @@ module.exports.getTransacao = function (app,req,res,linhas) {
 			transacaoDAO.setBrancos4(linhas[i]);
 			transacaoDAO.setNumeroSequencial(linhas[i]);
 
-			console.log(transacaoDAO.getNome());
-
 			transacoes.push(transacaoDAO); //Adiciona a transação ao final do Array
+
+			console.log(transacaoDAO.getNome());
 
 		}else if(linhas[i].toString().substring(0,1) == 9){
 			
@@ -61,7 +61,7 @@ module.exports.getTransacao = function (app,req,res,linhas) {
 	}
 
 	for(var i=0; i<transacoes.length; i++){
-		console.log(transacoes[10].getNome());
+		console.log(transacoes[i].getNome());
 	}
 
 	return transacaoDAO;
