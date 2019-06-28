@@ -3,7 +3,7 @@ var fs = require('fs');
 module.exports.remessa = function (app,req,res) {
 	var linhas;
 
-	fs.readFile('./RM181018.txt', 'UTF8' ,function(err,data){
+	fs.readFile('./app/files/RM181018.txt', 'UTF8' ,function(err,data){
 		if(err){
 			console.error("Not Open: %s",err);
 			process.exit(1);
@@ -16,4 +16,12 @@ module.exports.remessa = function (app,req,res) {
 
 		res.render("layout/relatorio", {linhas, headerDAO, transacaoDAO, trailerDAO});
 	});
+}
+
+module.exports.home = function(app,req,res){
+	res.render("layout/index");
+}
+
+module.exports.carregarArquivo = function(app,req,res){
+	console.log(req.files.foo);
 }
