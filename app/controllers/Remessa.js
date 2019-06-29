@@ -26,7 +26,7 @@ module.exports.carregarArquivo = function(app,req,res){
 	//'./app/files/'+req.files.foo.name
 	var linhas;
 
-	fs.readFile(''+req.files.foo.tempFilePath, 'UTF8' ,function(err,data){
+	fs.readFile(''+req.files.arquivoRemessa.tempFilePath, 'UTF8' ,function(err,data){
 		if(err){
 			console.error("Not Open: %s",err);
 			process.exit(1);
