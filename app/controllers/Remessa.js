@@ -19,7 +19,7 @@ module.exports.remessa = function (app,req,res) {
 }
 
 module.exports.home = function(app,req,res){
-	res.render("layout/index");
+	res.render("layout/carregarRemessa");
 }
 
 module.exports.carregarArquivo = function(app,req,res){

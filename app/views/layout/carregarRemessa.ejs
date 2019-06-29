@@ -10,11 +10,14 @@
 		<a class="navbar-brand" href="#">Remessa Itaú CNAB 400</a>
 		<a class="navbar-brand" href="#">Home</a>
 	</nav>
-	<div class = "col-sm-12">
-			<form action="/carregarArquivo" method="POST" enctype="multipart/form-data">
-				<input name="arquivoRemessa" type="file" />
-				<input type="submit" >
-			</form>
+	<div class="col-sm-8">
+		<form action="/carregarArquivo" method="POST" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="exampleFormControlFile1">Arquivo de Remessa:</label>
+				<input type="file" class="form-control-file" id="exampleFormControlFile1" name="arquivoRemessa">
+			</div>
+			<input type="submit" class="btn btn-primary mb-2">
+		</form>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
