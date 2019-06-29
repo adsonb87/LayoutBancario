@@ -11,7 +11,10 @@ app.set('views','./app/views');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressValidator());
-app.use(fileUpload());
+app.use(fileUpload({
+	useTempFiles : true,
+	tempFileDir : './app/files/'
+}));
 //app.use(express.static('./app/public'));
 
 consign()
