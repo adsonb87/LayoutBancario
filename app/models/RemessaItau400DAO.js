@@ -226,375 +226,396 @@ RemessaItau400DAO.prototype.getNumeroSequencialTrailer = function(){
 	return this.numeroSequencialTrailer;
 }
 
-TransacaoDAO.prototype.setTipoDeRegistroTransacao = function(linhas){
+RemessaItau400DAO.prototype.setTipoDeRegistroTransacao = function(linhas){
 	this.tipoDeRegistroTransacao = linhas.toString().substring(0,1);
 }
 
-TransacaoDAO.prototype.getTipoDeRegistroTransacao = function(){
+RemessaItau400DAO.prototype.getTipoDeRegistroTransacao = function(){
 	return this.tipoDeRegistroTransacao;
 }
 
-TransacaoDAO.prototype.setCodigoDeInscricaoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setCodigoDeInscricaoTransacao = function(linhas){
 	this.codigoDeInscricaoTransacao = linhas.toString().substring(1,3);
 }
 
-TransacaoDAO.prototype.getCodigoDeInscricaoTransacao = function(){
+RemessaItau400DAO.prototype.getCodigoDeInscricaoTransacao = function(){
 	return this.codigoDeInscricaoTransacao;
 }
 
-TransacaoDAO.prototype.setNumeroDeInscricaoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setNumeroDeInscricaoTransacao = function(linhas){
 	this.numeroDeInscricaoTransacao = linhas.toString().substring(3,17);
 }
 
-TransacaoDAO.prototype.getNumeroDeInscricaoTransacao = function(){
+RemessaItau400DAO.prototype.getNumeroDeInscricaoTransacao = function(){
 	return this.numeroDeInscricaoTransacao;
 }
 
-TransacaoDAO.prototype.setAgenciaTransacao = function(linhas){
+RemessaItau400DAO.prototype.setAgenciaTransacao = function(linhas){
 	this.agenciaTransacao = linhas.toString().substring(17,21);
 }
 
-TransacaoDAO.prototype.getAgenciaTransacao = function(){
+RemessaItau400DAO.prototype.getAgenciaTransacao = function(){
 	return this.agenciaTransacao;
 }
 
-TransacaoDAO.prototype.setZerosTransacao = function(linhas){
+RemessaItau400DAO.prototype.setZerosTransacao = function(linhas){
 	this.zerosTransacao = linhas.toString().substring(21,23);
 }
 
-TransacaoDAO.prototype.getZerosTransacao = function(){
+RemessaItau400DAO.prototype.getZerosTransacao = function(){
 	return this.zerosTransacao;
 }
 
-TransacaoDAO.prototype.setContaTransacao = function(linhas){
+RemessaItau400DAO.prototype.setContaTransacao = function(linhas){
 	this.contaTransacao = linhas.toString().substring(23,28);
 }
 
-TransacaoDAO.prototype.getContaTransacao = function(){
+RemessaItau400DAO.prototype.getContaTransacao = function(){
 	return this.contaTransacao;
 }
 
-TransacaoDAO.prototype.setDacTransacao = function(linhas){
+RemessaItau400DAO.prototype.setDacTransacao = function(linhas){
 	this.dacTransacao = linhas.toString().substring(28,29);
 }
 
-TransacaoDAO.prototype.getDacTransacao = function(){
+RemessaItau400DAO.prototype.getDacTransacao = function(){
 	return this.dacTransacao;
 }
 
-TransacaoDAO.prototype.setBrancosTransacao = function(linhas){
+RemessaItau400DAO.prototype.setBrancosTransacao = function(linhas){
 	this.brancosTransacao = linhas.toString().substring(29,33);
 }
 
-TransacaoDAO.prototype.getBrancosTransacao = function(linhas){
+RemessaItau400DAO.prototype.getBrancosTransacao = function(linhas){
 	return this.brancosTransacao;
 }
 
-TransacaoDAO.prototype.setInstrucaoAlegacaoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setInstrucaoAlegacaoTransacao = function(linhas){
 	this.instrucaoAlegacaoTransacao = linhas.toString().substring(33,37);
 }
 
-TransacaoDAO.prototype.getInstrucaoAlegacaoTransacao = function(){
+RemessaItau400DAO.prototype.getInstrucaoAlegacaoTransacao = function(){
 	return this.instrucaoAlegacaoTransacao;
 }
 
-TransacaoDAO.prototype.setUsoDaEmpresaTransacao = function(linhas){
+RemessaItau400DAO.prototype.setUsoDaEmpresaTransacao = function(linhas){
 	this.usoDaEmpresaTransacao = linhas.toString().substring(37,62);
 }
 
-TransacaoDAO.prototype.getUsoDaEmpresaTransacao = function(){
+RemessaItau400DAO.prototype.getUsoDaEmpresaTransacao = function(){
 	return this.usoDaEmpresaTransacao;
 }
 
-TransacaoDAO.prototype.setNossoNumeroTransacao = function(linhas){
+RemessaItau400DAO.prototype.setNossoNumeroTransacao = function(linhas){
 	this.nossoNumeroTransacao = linhas.toString().substring(62,70);
 }
 
-TransacaoDAO.prototype.getNossoNumeroTransacao = function(){
+RemessaItau400DAO.prototype.getNossoNumeroTransacao = function(){
 	return this.nossoNumeroTransacao;
 }
 
-TransacaoDAO.prototype.setQuantidadeMoedaTransacao = function(linhas){
+RemessaItau400DAO.prototype.setQuantidadeMoedaTransacao = function(linhas){
 	this.quantidadeMoedaTransacao = linhas.toString().substring(70,83);
 }
 
-TransacaoDAO.prototype.getQuantidadeMoedaTransacao = function(){
+RemessaItau400DAO.prototype.getQuantidadeMoedaTransacao = function(){
 	return this.quantidadeMoedaTransacao;
 }
 
-TransacaoDAO.prototype.setNumeroDaCarteiraTransacao = function(linhas){
+RemessaItau400DAO.prototype.setNumeroDaCarteiraTransacao = function(linhas){
 	this.numeroDaCarteiraTransacao = linhas.toString().substring(83,86);
 }
 
-TransacaoDAO.prototype.getNumeroDaCarteiraTransacao = function(){
+RemessaItau400DAO.prototype.getNumeroDaCarteiraTransacao = function(){
 	return this.numeroDaCarteiraTransacao;
 }
 
-TransacaoDAO.prototype.setUsoDoBancoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setUsoDoBancoTransacao = function(linhas){
 	this.usoDoBancoTransacao = linhas.toString().substring(86,107);
 }
 
-TransacaoDAO.prototype.getUsoDoBancoTransacao = function(){
+RemessaItau400DAO.prototype.getUsoDoBancoTransacao = function(){
 	return this.usoDoBancoTransacao;
 }
 
-TransacaoDAO.prototype.setCarteiraTransacao = function(linhas){
+RemessaItau400DAO.prototype.setCarteiraTransacao = function(linhas){
 	this.carteiraTransacao = linhas.toString().substring(107,108);
 }
 
-TransacaoDAO.prototype.getCarteiraTransacao = function(){
+RemessaItau400DAO.prototype.getCarteiraTransacao = function(){
 	return this.carteiraTransacao;
 }
 
-TransacaoDAO.prototype.setCodigoOcorrenciaTransacao = function(linhas){
+RemessaItau400DAO.prototype.setCodigoOcorrenciaTransacao = function(linhas){
 	this.codigoOcorrenciaTransacao = linhas.toString().substring(108,110);
 }
 
-TransacaoDAO.prototype.getCodigoOcorrenciaTransacao = function(){
+RemessaItau400DAO.prototype.getCodigoOcorrenciaTransacao = function(){
 	return this.codigoOcorrenciaTransacao;
 }
 
-TransacaoDAO.prototype.setNumeroDocumentoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setNumeroDocumentoTransacao = function(linhas){
 	this.numeroDocumentoTransacao = linhas.toString().substring(110,120);
 }
 
-TransacaoDAO.prototype.getNumeroDocumentoTransacao = function(){
+RemessaItau400DAO.prototype.getNumeroDocumentoTransacao = function(){
 	return this.numeroDocumentoTransacao;
 }
 
-TransacaoDAO.prototype.setVencimentoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setVencimentoTransacao = function(linhas){
 	this.vencimentoTransacao = linhas.toString().substring(120,126);
 }	
 
-TransacaoDAO.prototype.getVencimentoTransacao = function(){
+RemessaItau400DAO.prototype.getVencimentoTransacao = function(){
 	return this.vencimentoTransacao;
 }	
 
-TransacaoDAO.prototype.setValorTituloTransacao = function(linhas){
+RemessaItau400DAO.prototype.setValorTituloTransacao = function(linhas){
 	this.valorTituloTransacao = linhas.toString().substring(126,139);
 }
 
-TransacaoDAO.prototype.getValorTituloTransacao = function(){
+RemessaItau400DAO.prototype.getValorTituloTransacao = function(){
 	return this.valorTituloTransacao;
 }
 	
-TransacaoDAO.prototype.setCodigoBancoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setCodigoBancoTransacao = function(linhas){
 	this.codigoBancoTransacao = linhas.toString().substring(139,142);
 }
 
-TransacaoDAO.prototype.getCodigoBancoTransacao = function(){
+RemessaItau400DAO.prototype.getCodigoBancoTransacao = function(){
 	return this.codigoBancoTransacao;
 }
 
-TransacaoDAO.prototype.setAgenciaCobradoraTransacao = function(linhas){
+RemessaItau400DAO.prototype.setAgenciaCobradoraTransacao = function(linhas){
 	this.agenciaCobradoraTransacao = linhas.toString().substring(142,147);
 }
 
-TransacaoDAO.prototype.getAgenciaCobradoraTransacao = function(){
+RemessaItau400DAO.prototype.getAgenciaCobradoraTransacao = function(){
 	return this.agenciaCobradoraTransacao;
 }
 
-TransacaoDAO.prototype.setEspecieTransacao = function(linhas){
+RemessaItau400DAO.prototype.setEspecieTransacao = function(linhas){
 	this.especieTransacao = linhas.toString().substring(147,149);
 }
 
-TransacaoDAO.prototype.getEspecieTransacao = function(){
+RemessaItau400DAO.prototype.getEspecieTransacao = function(){
 	return this.especieTransacao;
 }
 
-TransacaoDAO.prototype.setAceiteTransacao = function(linhas){
+RemessaItau400DAO.prototype.setAceiteTransacao = function(linhas){
 	this.aceiteTransacao = linhas.toString().substring(149,150);
 }
 
-TransacaoDAO.prototype.getAceiteTransacao = function(){
+RemessaItau400DAO.prototype.getAceiteTransacao = function(){
 	return this.aceiteTransacao;
 }
 
-TransacaoDAO.prototype.setDataEmissaoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setDataEmissaoTransacao = function(linhas){
 	this.dataEmissaoTransacao = linhas.toString().substring(150,156);
 }
 
-TransacaoDAO.prototype.getDataEmissaoTransacao = function(){
+RemessaItau400DAO.prototype.getDataEmissaoTransacao = function(){
 	return this.dataEmissaoTransacao;
 }
 
-TransacaoDAO.prototype.setInstrucao1Transacao = function(linhas){
+RemessaItau400DAO.prototype.setInstrucao1Transacao = function(linhas){
 	this.instrucao1Transacao = linhas.toString().substring(156,158);
 }
 	
-TransacaoDAO.prototype.getInstrucao1Transacao = function(){
+RemessaItau400DAO.prototype.getInstrucao1Transacao = function(){
 	return this.instrucao1Transacao;
 }
 
-TransacaoDAO.prototype.setInstrucao2Transacao = function(linhas){
+RemessaItau400DAO.prototype.setInstrucao2Transacao = function(linhas){
 	this.instrucao2Transacao = linhas.toString().substring(158,160);
 }
 
-TransacaoDAO.prototype.getInstrucao2Transacao = function(){
+RemessaItau400DAO.prototype.getInstrucao2Transacao = function(){
 	return this.instrucao2Transacao;
 }
 
-TransacaoDAO.prototype.setJurosDiaTransacao = function(linhas){
+RemessaItau400DAO.prototype.setJurosDiaTransacao = function(linhas){
 	this.jurosDiaTransacao = linhas.toString().substring(160,173);
 }
 
-TransacaoDAO.prototype.getJurosDiaTransacao = function(){
+RemessaItau400DAO.prototype.getJurosDiaTransacao = function(){
 	return this.jurosDiaTransacao;
 }
 
-TransacaoDAO.prototype.setDataDescontoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setDataDescontoTransacao = function(linhas){
 	this.dataDescontoTransacao = linhas.toString().substring(173,179);
 }
 
-TransacaoDAO.prototype.getDataDescontoTransacao = function(){
+RemessaItau400DAO.prototype.getDataDescontoTransacao = function(){
 	return this.dataDescontoTransacao;
 }
 
-TransacaoDAO.prototype.setValorDescontoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setValorDescontoTransacao = function(linhas){
 	this.valorDescontoTransacao = linhas.toString().substring(179,192);
 }
 
-TransacaoDAO.prototype.getValorDescontoTransacao = function(){
+RemessaItau400DAO.prototype.getValorDescontoTransacao = function(){
 	return this.valorDescontoTransacao;
 }
 
-TransacaoDAO.prototype.setValorIOFTransacao = function(linhas){
+RemessaItau400DAO.prototype.setValorIOFTransacao = function(linhas){
 	this.valorIOFTransacao = linhas.toString().substring(192,205);
 }
 
-TransacaoDAO.prototype.getValorIOFTransacao = function(){
+RemessaItau400DAO.prototype.getValorIOFTransacao = function(){
 	return this.valorIOFTransacao;
 }
 
-TransacaoDAO.prototype.setAbatimentoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setAbatimentoTransacao = function(linhas){
 	this.abatimentoTransacao = linhas.toString().substring(205,218);
 }
 
-TransacaoDAO.prototype.getAbatimentoTransacao = function(){
+RemessaItau400DAO.prototype.getAbatimentoTransacao = function(){
 	return this.abatimentoTransacao;
 }
 
-TransacaoDAO.prototype.setCodigoInscricaoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setCodigoInscricaoTransacao = function(linhas){
 	this.codigoInscricaoTransacao = linhas.toString().substring(218,220);
 }
 
-TransacaoDAO.prototype.getCodigoInscricaoTransacao = function(){
+RemessaItau400DAO.prototype.getCodigoInscricaoTransacao = function(){
 	return this.codigoInscricaoTransacao;
 }
 
-TransacaoDAO.prototype.setNumeroInscricaoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setNumeroInscricaoTransacao = function(linhas){
 	this.numeroInscricaoTransacao = linhas.toString().substring(220,234);
 }
 	
-TransacaoDAO.prototype.getNumeroInscricaoTransacao = function(){
+RemessaItau400DAO.prototype.getNumeroInscricaoTransacao = function(){
 	return this.numeroInscricaoTransacao;
 }
 
-TransacaoDAO.prototype.setNomeTransacao = function(linhas){
+RemessaItau400DAO.prototype.setNomeTransacao = function(linhas){
 	this.nomeTransacao = linhas.toString().substring(234,264);
 }
 
-TransacaoDAO.prototype.getNomeTransacao = function(){
+RemessaItau400DAO.prototype.getNomeTransacao = function(){
 	return this.nomeTransacao;
 }
 
-TransacaoDAO.prototype.setBrancos2Transacao = function(linhas){
+RemessaItau400DAO.prototype.setBrancos2Transacao = function(linhas){
 	this.brancos2Transacao = linhas.toString().substring(264,274);
 }
 
-TransacaoDAO.prototype.getBrancos2Transacao = function(){
+RemessaItau400DAO.prototype.getBrancos2Transacao = function(){
 	return this.brancos2Transacao;
 }
 
-TransacaoDAO.prototype.setLogradouroTransacao = function(linhas){
+RemessaItau400DAO.prototype.setLogradouroTransacao = function(linhas){
 	this.logradouroTransacao = linhas.toString().substring(274,314);
 }
 
-TransacaoDAO.prototype.getLogradouroTransacao = function(){
+RemessaItau400DAO.prototype.getLogradouroTransacao = function(){
 	return this.logradouroTransacao;
 }
 	
-TransacaoDAO.prototype.setBairroTransacao = function(linhas){
+RemessaItau400DAO.prototype.setBairroTransacao = function(linhas){
 	this.bairroTransacao = linhas.toString().substring(314,326);
 }
 
-TransacaoDAO.prototype.getBairroTransacao = function(){
+RemessaItau400DAO.prototype.getBairroTransacao = function(){
 	return this.bairroTransacao;
 }
 	
-TransacaoDAO.prototype.setCepTransacao = function(linhas){
+RemessaItau400DAO.prototype.setCepTransacao = function(linhas){
 	this.cepTransacao = linhas.toString().substring(326,334);
 }
 
-TransacaoDAO.prototype.getCepTransacao = function(){
+RemessaItau400DAO.prototype.getCepTransacao = function(){
 	return this.cepTransacao;
 }
 	
-TransacaoDAO.prototype.setCidadeTransacao = function(linhas){
+RemessaItau400DAO.prototype.setCidadeTransacao = function(linhas){
 	this.cidadeTransacao = linhas.toString().substring(334,349);
 }
 
-TransacaoDAO.prototype.getCidadeTransacao = function(){
+RemessaItau400DAO.prototype.getCidadeTransacao = function(){
 	return this.cidadeTransacao;
 }
 
-TransacaoDAO.prototype.setEstadoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setEstadoTransacao = function(linhas){
 	this.estadoTransacao = linhas.toString().substring(349,351);
 }
 
-TransacaoDAO.prototype.getEstadoTransacao = function(){
+RemessaItau400DAO.prototype.getEstadoTransacao = function(){
 	return this.estadoTransacao;
 }
 	
-TransacaoDAO.prototype.setSacadorAvalistaTransacao = function(linhas){
+RemessaItau400DAO.prototype.setSacadorAvalistaTransacao = function(linhas){
 	this.sacadorAvalistaTransacao = linhas.toString().substring(351,381);
 }
 	
-TransacaoDAO.prototype.getSacadorAvalistaTransacao = function(){
+RemessaItau400DAO.prototype.getSacadorAvalistaTransacao = function(){
 	return this.sacadorAvalistaTransacao;
 }
 
-TransacaoDAO.prototype.setBrancos3Transacao = function(linhas){
+RemessaItau400DAO.prototype.setBrancos3Transacao = function(linhas){
 	this.brancos3Transacao = linhas.toString().substring(381,385);
 }
 	
-TransacaoDAO.prototype.getBrancos3Transacao = function(){
+RemessaItau400DAO.prototype.getBrancos3Transacao = function(){
 	return this.brancos3Transacao;
 }
 
-TransacaoDAO.prototype.setDataDeMoraTransacao = function(linhas){
+RemessaItau400DAO.prototype.setDataDeMoraTransacao = function(linhas){
 	this.dataDeMoraTransacao = linhas.toString().substring(385,391);
 }
 	
-TransacaoDAO.prototype.getDataDeMoraTransacao = function(){
+RemessaItau400DAO.prototype.getDataDeMoraTransacao = function(){
 	return this.dataDeMoraTransacao;
 }
 
-TransacaoDAO.prototype.setPrazoTransacao = function(linhas){
+RemessaItau400DAO.prototype.setPrazoTransacao = function(linhas){
 	this.prazoTransacao = linhas.toString().substring(391,393);
 }
 
-TransacaoDAO.prototype.getPrazoTransacao = function(){
+RemessaItau400DAO.prototype.getPrazoTransacao = function(){
 	return this.prazoTransacao;
 }
 
-TransacaoDAO.prototype.setBrancos4Transacao = function(linhas){
+RemessaItau400DAO.prototype.setBrancos4Transacao = function(linhas){
 	this.brancos4Transacao = linhas.toString().substring(393,394);
 }
 
-TransacaoDAO.prototype.getBrancos4Transacao = function(){
+RemessaItau400DAO.prototype.getBrancos4Transacao = function(){
 	return this.brancos4Transacao = linhas.toString().substring(393,394);
 }
 
-TransacaoDAO.prototype.setNumeroSequencialTransacao = function(linhas){
+RemessaItau400DAO.prototype.setNumeroSequencialTransacao = function(linhas){
 	this.numeroSequencialTransacao = linhas.toString().substring(394,400);
 }
 
-TransacaoDAO.prototype.getNumeroSequencialTransacao = function(){
+RemessaItau400DAO.prototype.getNumeroSequencialTransacao = function(){
 	return this.numeroSequencialTransacao;
 }
 
+RemessaItau400DAO.prototype.setHeader = function(linhas){
+	this.setTipoDeRegistroHeader(linhas[0]);
+	this.setOperacaoHeader(linhas[0]);
+	this.setLiteralDeRemessaHeader(linhas[0]);
+	this.setCodigoDeServicoHeader(linhas[0]);
+	this.setLiteralDeServicoHeader(linhas[0]);
+	this.setAgenciaHeader(linhas[0]);			
+	this.setZerosHeader(linhas[0]);		
+	this.setContaHeader(linhas[0]);			
+	this.setDacHeader(linhas[0]);	    
+	this.setBrancosHeader(linhas[0]);
+	this.setNomeDaEmpresaHeader(linhas[0]);
+	this.setCodigoDoBancoHeader(linhas[0]);	
+	this.setNomeDoBancoHeader(linhas[0]);
+	this.setDataDeGeracaoHeader(linhas[0]);
+	this.setBrancos2Header(linhas[0]);
+	this.setNumeroSequencialHeader(linhas[0]);
+}
 
+RemessaItau400DAO.prototype.setTrailer = function(){
+	
+}
 
 module.exports = function(){
     return RemessaItau400DAO;
