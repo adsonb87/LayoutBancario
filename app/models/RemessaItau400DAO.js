@@ -613,8 +613,14 @@ RemessaItau400DAO.prototype.setHeader = function(linhas){
 	this.setNumeroSequencialHeader(linhas[0]);
 }
 
-RemessaItau400DAO.prototype.setTrailer = function(){
-	
+RemessaItau400DAO.prototype.setTrailer = function(linhas){
+	for(var i=0; i<linhas.length; i++){
+		if(linhas[i].toString().substring(0,1) == 9){
+			this.setTipoDeRegistroTrailer(linhas[i]);      
+			this.setBrancosTrailer(linhas[i]);
+			this.setNumeroSequencialTrailer(linhas[i]);	
+		}
+	}
 }
 
 module.exports = function(){
