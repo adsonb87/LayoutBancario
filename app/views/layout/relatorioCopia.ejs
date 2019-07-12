@@ -28,14 +28,14 @@
 					</thead>
 					<tbody>		
 						<tr>			
-							<td><%=headerDAO.getLiteralDeRemessa()%></td>
-							<td><%=headerDAO.getLiteralDeServico()%></td>
-							<td><%=headerDAO.getAgencia()%></td>
-							<td><%=headerDAO.getConta()%></td>
-							<td><%=headerDAO.getDac()%></td>
-							<td><%=headerDAO.getNomeDaEmpresa()%></td>
-							<td><%=headerDAO.getNomeDoBanco()%></td>
-							<td><%=headerDAO.getDataDeGeracao()%></td>
+							<td><%=remessa[0].getLiteralDeRemessaHeader()%></td>
+							<td><%=remessa[0].getLiteralDeServicoHeader()%></td>
+							<td><%=remessa[0].getAgenciaHeader()%></td>
+							<td><%=remessa[0].getContaHeader()%></td>
+							<td><%=remessa[0].getDacHeader()%></td>
+							<td><%=remessa[0].getNomeDaEmpresaHeader()%></td>
+							<td><%=remessa[0].getNomeDoBancoHeader()%></td>
+							<td><%=remessa[0].getDataDeGeracaoHeader()%></td>
 						</tr>
 					</tbody>
 				</table>
@@ -55,18 +55,20 @@
 					</thead>
 					<tbody>
 						<%var cont = 0;%>
-						<% for(var i=0; i<transacaoDAO.length; ++i){ %>		
-						<tr>
-							<td><%=transacaoDAO[i].getCodigoOcorrencia()%></td>			
-							<td><%=transacaoDAO[i].getNome()%></td>
-							<td><%=transacaoDAO[i].getNossoNumero()%></td>
-							<td><%=transacaoDAO[i].getVencimento()%></td>
-							<td><%=transacaoDAO[i].getValorTitulo()%></td>
-							<td><%=transacaoDAO[i].getJuroDia()%></td>
-							<td><%=transacaoDAO[i].getDataDesconto()%></td>
-							<td><%=transacaoDAO[i].getValorDesconto()%></td>
-							<td><%=transacaoDAO[i].getAbatimento()%></td>
-						</tr>
+						<% for(var i=0; i<remessa.length; ++i){ %>
+							<% if(remessa[i].toString().substring(0,1) != 9) { %>		
+								<tr>
+									<td><%=remessa[i].getCodigoOcorrenciaTransacao()%></td>			
+									<td><%=remessa[i].getNomeTransacao()%></td>
+									<td><%=remessa[i].getNossoNumeroTransacao()%></td>
+									<td><%=remessa[i].getVencimentoTransacao()%></td>
+									<td><%=remessa[i].getValorTituloTransacao()%></td>
+									<td><%=remessa[i].getJurosDiaTransacao()%></td>
+									<td><%=remessa[i].getDataDescontoTransacao()%></td>
+									<td><%=remessa[i].getValorDescontoTransacao()%></td>
+									<td><%=remessa[i].getAbatimentoTransacao()%></td>
+								</tr>
+							<%}%>
 						<%cont++%>
 						<%}%>
 					</tbody>
@@ -82,9 +84,9 @@
 					</thead>
 					<tbody>		
 						<tr>			
-							<td><%=trailerDAO.getTipoDeRegistro()%></td>
-							<td><%=trailerDAO.getBrancos()%></td>
-							<td><%=trailerDAO.getNumeroSequencial()%></td>
+							<td><%=remessa[2].getTipoDeRegistroTrailer()%></td>
+							<td><%=remessa[2].getBrancosTrailer()%></td>
+							<td><%=remessa[2].getNumeroSequencialTrailer()%></td>
 						</tr>
 					</tbody>
 				</table>

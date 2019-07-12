@@ -10,6 +10,7 @@ module.exports = function (app) {
 	});
 
 	app.post('/carregarArquivo',function(req,res){
-		app.app.controllers.Remessa.carregarArquivo(app,req,res);
+		app.app.controllers.RemessaItau400.carregarArquivo(app,req,res);
+		//app.app.controllers.Remessa.carregarArquivo(app,req,res);
 	});
 };
