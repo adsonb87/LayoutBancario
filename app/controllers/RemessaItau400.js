@@ -14,17 +14,18 @@ module.exports.carregarArquivo = function(app,req,res){
 		}
 		linhas = data.split(/\r?\n/);
         
-        var remessaItau400DAO = new app.app.models.RemessaItau400DAO();	
 		var remessa = [];
 
 		for(var i=0; i<linhas.length; i++){
+			var remessaItau400DAO = new app.app.models.RemessaItau400DAO();	
 			if(i==0){
-				
+			
 			}else if(linhas[i].toString().substring(0,1) != 9){
 
 			}else  if(linhas[i].toString().substring(0,1) == 9){
 			
 			}
+			remessa.push();
 		}
 
 	res.render("layout/relatorio", {linhas, remessaItau400DAO});
