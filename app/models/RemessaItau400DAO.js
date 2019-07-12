@@ -186,11 +186,11 @@ RemessaItau400DAO.prototype.getDataDeGeracaoHeader = function(){
 	return this.dataDeGeracaoHeader;
 }
 
-RemessaItau400DAO.prototype.setBrancosHeader2 = function(linhas){
+RemessaItau400DAO.prototype.setBrancos2Header = function(linhas){
 	this.brancosHeader2 = linhas.toString().substring(100,394);
 }
 
-RemessaItau400DAO.prototype.getBrancosHeader2 = function(){
+RemessaItau400DAO.prototype.getBrancos2Header = function(){
 	return this.brancosHeader2;
 }
 
@@ -595,80 +595,80 @@ RemessaItau400DAO.prototype.getNumeroSequencialTransacao = function(){
 }
 
 RemessaItau400DAO.prototype.setHeader = function(linhas){
-	this.setTipoDeRegistroHeader(linhas[0]);
-	this.setOperacaoHeader(linhas[0]);
-	this.setLiteralDeRemessaHeader(linhas[0]);
-	this.setCodigoDeServicoHeader(linhas[0]);
-	this.setLiteralDeServicoHeader(linhas[0]);
-	this.setAgenciaHeader(linhas[0]);			
-	this.setZerosHeader(linhas[0]);		
-	this.setContaHeader(linhas[0]);			
-	this.setDacHeader(linhas[0]);	    
-	this.setBrancosHeader(linhas[0]);
-	this.setNomeDaEmpresaHeader(linhas[0]);
-	this.setCodigoDoBancoHeader(linhas[0]);	
-	this.setNomeDoBancoHeader(linhas[0]);
-	this.setDataDeGeracaoHeader(linhas[0]);
-	this.setBrancos2Header(linhas[0]);
-	this.setNumeroSequencialHeader(linhas[0]);
+	this.setTipoDeRegistroHeader(linhas);
+	this.setOperacaoHeader(linhas);
+	this.setLiteralDeRemessaHeader(linhas);
+	this.setCodigoDeServicoHeader(linhas);
+	this.setLiteralDeServicoHeader(linhas);
+	this.setAgenciaHeader(linhas);			
+	this.setZerosHeader(linhas);		
+	this.setContaHeader(linhas);			
+	this.setDacHeader(linhas);	    
+	this.setBrancosHeader(linhas);
+	this.setNomeDaEmpresaHeader(linhas);
+	this.setCodigoDoBancoHeader(linhas);	
+	this.setNomeDoBancoHeader(linhas);
+	this.setDataDeGeracaoHeader(linhas);
+	this.setBrancos2Header(linhas);
+	this.setNumeroSequencialHeader(linhas);
 }
 
 RemessaItau400DAO.prototype.setTrailer = function(linhas){
-	if(linhas[i].toString().substring(0,1) == 9){
-		this.setTipoDeRegistroTrailer(linhas[i]);      
-		this.setBrancosTrailer(linhas[i]);
-		this.setNumeroSequencialTrailer(linhas[i]);	
+	if(linhas.toString().substring(0,1) == 9){
+		this.setTipoDeRegistroTrailer(linhas);      
+		this.setBrancosTrailer(linhas);
+		this.setNumeroSequencialTrailer(linhas);	
 	}
 }
 
 RemessaItau400DAO.prototype.setTransacao = function(linhas){
-	if(linhas[i].toString().substring(0,1) != 9){
-		this.setTipoDeRegistroTransacao(linhas[i]);
-		this.setCodigoDeInscricaoTransacao(linhas[i]);
-		this.setNumeroDeInscricaoTransacao(linhas[i]);	
-		this.setAgenciaTransacao(linhas[i]);
-		this.setZerosTransacao(linhas[i]);
-		this.setContaTransacao(linhas[i]);
-		this.setDacTransacao(linhas[i]);
-		this.setBrancosTransacao(linhas[i]);
-		this.setInstrucaoAlegacaoTransacao(linhas[i]);
-		this.setUsoDaEmpresaTransacao(linhas[i]);
-		this.setNossoNumeroTransacao(linhas[i]);
-		this.setQuantidadeMoedaTransacao(linhas[i]);
-		this.setNumeroDaCarteiraTransacao(linhas[i]);
-		this.setUsoDoBancoTransacao(linhas[i]);
-		this.setCarteiraTransacao(linhas[i]);
-		this.setCodigoOcorrenciaTransacao(linhas[i]);
-		this.setNumeroDocumentoTransacao(linhas[i]);
-		this.setVencimentoTransacao(linhas[i]);
-		this.setValorTituloTransacao(linhas[i]);
-		this.setCodigoBancoTransacao(linhas[i]);
-		this.setAgenciaCobradoraTransacao(linhas[i]);
-		this.setEspecieTransacao(linhas[i]);
-		this.setAceiteTransacao(linhas[i]);
-		this.setDataEmissaoTransacao(linhas[i]);
-		this.setInstrucao1Transacao(linhas[i]);
-		this.setInstrucao2Transacao(linhas[i]);
-		this.setJuroDiaTransacao(linhas[i]);
-		this.setDataDescontoTransacao(linhas[i]);
-		this.setValorDescontoTransacao(linhas[i]);
-		this.setValorIOFTransacao(linhas[i]);
-		this.setAbatimentoTransacao(linhas[i]);
-		this.setCodigoInscricaoTransacao(linhas[i]);
-		this.setNumeroInscricaoTransacao(linhas[i]);
-		this.setNomeTransacao(linhas[i]);
-		this.setBrancos2Transacao(linhas[i]);
-		this.setLogradouroTransacao(linhas[i]);
-		this.setBairroTransacao(linhas[i]);
-		this.setCepTransacao(linhas[i]);
-		this.setCidadeTransacao(linhas[i]);
-		this.setEstadoTransacao(linhas[i]);
-		this.setSacadorAvalistaTransacao(linhas[i]);
-		this.setBrancos3Transacao(linhas[i]);
-		this.setDataDeMoraTransacao(linhas[i]);
-		this.setPrazoTransacao(linhas[i]);
-		this.setBrancos4Transacao(linhas[i]);
-		this.setNumeroSequencialTransacao(linhas[i]);
+	if(linhas.toString().substring(0,1) != 9){
+		this.setTipoDeRegistroTransacao(linhas);
+		this.setCodigoDeInscricaoTransacao(linhas);
+		this.setNumeroDeInscricaoTransacao(linhas);	
+		this.setAgenciaTransacao(linhas);
+		this.setZerosTransacao(linhas);
+		this.setContaTransacao(linhas);
+		this.setDacTransacao(linhas);
+		this.setBrancosTransacao(linhas);
+		this.setInstrucaoAlegacaoTransacao(linhas);
+		this.setUsoDaEmpresaTransacao(linhas);
+		this.setNossoNumeroTransacao(linhas);
+		this.setQuantidadeMoedaTransacao(linhas);
+		this.setNumeroDaCarteiraTransacao(linhas);
+		this.setUsoDoBancoTransacao(linhas);
+		this.setCarteiraTransacao(linhas);
+		this.setCodigoOcorrenciaTransacao(linhas);
+		this.setNumeroDocumentoTransacao(linhas);
+		this.setVencimentoTransacao(linhas);
+		this.setValorTituloTransacao(linhas);
+		this.setCodigoBancoTransacao(linhas);
+		this.setAgenciaCobradoraTransacao(linhas);
+		this.setEspecieTransacao(linhas);
+		this.setAceiteTransacao(linhas);
+		this.setDataEmissaoTransacao(linhas);
+		this.setInstrucao1Transacao(linhas);
+		this.setInstrucao2Transacao(linhas);
+		this.setJuroDiaTransacao(linhas);
+		this.setDataDescontoTransacao(linhas);
+		this.setValorDescontoTransacao(linhas);
+		this.setValorIOFTransacao(linhas);
+		this.setAbatimentoTransacao(linhas);
+		this.setCodigoInscricaoTransacao(linhas);
+		this.setNumeroInscricaoTransacao(linhas);
+		this.setNomeTransacao(linhas);
+		this.setBrancos2Transacao(linhas);
+		this.setLogradouroTransacao(linhas);
+		this.setBairroTransacao(linhas);
+		this.setCepTransacao(linhas);
+		this.setCidadeTransacao(linhas);
+		this.setEstadoTransacao(linhas);
+		this.setSacadorAvalistaTransacao(linhas);
+		this.setBrancos3Transacao(linhas);
+		this.setDataDeMoraTransacao(linhas);
+		this.setPrazoTransacao(linhas);
+		this.setBrancos4Transacao(linhas);
+		this.setNumeroSequencialTransacao(linhas);
 	}
 }
 
