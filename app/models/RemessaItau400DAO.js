@@ -595,7 +595,6 @@ RemessaItau400DAO.prototype.getNumeroSequencialTransacao = function(){
 }
 
 RemessaItau400DAO.prototype.setHeader = function(linhas){
-	console.log("linha1>>"+linhas);
 	this.setTipoDeRegistroHeader(linhas);
 	this.setOperacaoHeader(linhas);
 	this.setLiteralDeRemessaHeader(linhas);
@@ -615,14 +614,12 @@ RemessaItau400DAO.prototype.setHeader = function(linhas){
 }
 
 RemessaItau400DAO.prototype.setTrailer = function(linhas){
-	console.log("linha3>>"+linhas);
 	this.setTipoDeRegistroTrailer(linhas);      
 	this.setBrancosTrailer(linhas);
 	this.setNumeroSequencialTrailer(linhas);	
 }
 
 RemessaItau400DAO.prototype.setTransacao = function(linhas){
-	console.log("linha2>>"+linhas);
 	this.setTipoDeRegistroTransacao(linhas);
 	this.setCodigoDeInscricaoTransacao(linhas);
 	this.setNumeroDeInscricaoTransacao(linhas);	
